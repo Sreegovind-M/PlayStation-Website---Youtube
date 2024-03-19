@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayStation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <img src="./Playstation_Img/logo.png" alt="Not Found" class="logo" />
+        <nav>
+          <ul id="menuList">
+            <li><a href="">Games</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Others</a></li>
+          </ul>
+        </nav>
+        <img
+          src="./Playstation_Img/menu.png"
+          alt="Not Found"
+          class="menu-logo"
+          onclick="toggleMenu()"
+        />
+      </div>
+
+      <div class="row1" id="row-1">
+        <div class="col-1">
+          <h2>PS5<br />DualSense Edge</h2>
+          <h3>Wireless Controller for PlayStation 5</h3>
+          <p>(Compatible/Generic)</p>
+          <h4>$62</h4>
+          <button type="button">
+            Buy Now <img src="./Playstation_Img/arrow.png" alt="Not Found" />
+          </button>
+        </div>
+        <div class="col-2">
+          <img
+            src="./Playstation_Img/controller2.webp"
+            alt="Not Found"
+            class="controller"
+          />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <img src="./Playstation_Img/add.png" alt="Not Found" />
+            <p><small>Add to Cart</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="row2" id="row-2">
+        <div class="col-1">
+          <h2>PS4 V2<br />Dualshock 4</h2>
+          <h3>Wireless Controller for PlayStation 4</h3>
+          <p>(Compatible/Generic)</p>
+          <h4>$32.50</h4>
+          <button type="button">
+            Buy Now <img src="./Playstation_Img/arrow.png" alt="Not Found" />
+          </button>
+        </div>
+        <div class="col-2">
+          <img
+            src="./Playstation_Img/controller.png"
+            alt="Not Found"
+            class="controller"
+          />
+          <div class="color-box"></div>
+          <div class="add-btn">
+            <img src="./Playstation_Img/add.png" alt="Not Found" />
+            <p><small>Add to Cart</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="next" onclick="toggleNext()">
+        <img src="./Playstation_Img/right.png" alt="Not Found" />
+      </div>
+      <div class="game-container">
+        <h1 style="text-align: center; margin-bottom: 10px">Games</h1>
+        <div class="game-box">
+          <div class="img-box">
+            <img src="./Playstation_Img/fifa.avif" alt="Not Found" />
+            <h3>FIFA 23</h3>
+          </div>
+          <div class="img-box">
+            <img src="./Playstation_Img/gow.webp" alt="Not Found" />
+            <h3>GOD OF WAR RAGNAORK</h3>
+          </div>
+          <div class="img-box">
+            <img src="./Playstation_Img/lego.avif" alt="Not Found" />
+            <h3>LEGO FORTNITE</h3>
+          </div>
+        </div>
+      </div>
+      <div class="social-links">
+        <img src="./Playstation_Img/fb.png" alt="Not Found" />
+        <img src="./Playstation_Img/tw.png" alt="Not Found" />
+        <img src="./Playstation_Img/ig.png" alt="Not Found" />
+      </div>
+    </div>
+    <script>
+      var menuList = document.getElementById("menuList");
+      var col = document.querySelector(".col-2");
+
+      menuList.style.maxHeight = "0px";
+      col.style.marginTop = "0px";
+
+      function toggleMenu() {
+        if (menuList.style.maxHeight == "0px") {
+          menuList.style.maxHeight = "150px";
+          col.style.marginTop = "80px";
+        } else {
+          menuList.style.maxHeight = "0px";
+          col.style.marginTop = "0px";
+        }
+      }
+
+      function toggleNext() {
+        var row1 = document.getElementById("row-1");
+        var row2 = document.getElementById("row-2");
+
+        if (row1.style.display === "none") {
+          row1.style.display = "flex";
+          row2.style.display = "none";
+        } else {
+          row1.style.display = "none";
+          row2.style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>
